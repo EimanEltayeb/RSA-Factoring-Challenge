@@ -14,7 +14,12 @@ void factorize(char *line)
 		if (num % x == 0)
 			break;
 		else
-			x++;
+		{
+			if (x == 2)
+				x++;
+			else
+				x = x + 2;
+		}
 	}
 	y = num / x;
 	printf("%llu=%llu*%d\n", num, y, x);
