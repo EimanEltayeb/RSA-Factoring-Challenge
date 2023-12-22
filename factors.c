@@ -4,7 +4,7 @@
 
 void factorize(char *line)
 {
-	long long int num, y, x;
+	long long int num, y, x = 2;
 
 	num = atoi(line);
 	while (x < num)
