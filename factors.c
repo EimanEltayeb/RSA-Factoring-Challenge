@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <math.h>
 
 void factorize(char *line)
 {
-	long long int num, y;
-	int x;
+	long long int num, y, x;
 
 	num = atoi(line);
 	while (x < num)
@@ -14,15 +12,10 @@ void factorize(char *line)
 		if (num % x == 0)
 			break;
 		else
-		{
-			if (x == 2)
-				x++;
-			else
-				x = x + 2;
-		}
+			x++;
 	}
 	y = num / x;
-	printf("%llu=%llu*%d\n", num, y, x);
+	printf("%llu=%llu*%llu\n", num, y, x);
 }
 
 /**
