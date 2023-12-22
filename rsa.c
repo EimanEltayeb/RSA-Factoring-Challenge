@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <math.h>
+
 
 void factorize(char *line)
 {
 	long long int num, y;
-	int x;
+	int x = 2;
 
 	num = atoi(line);
 	while (x < num)
