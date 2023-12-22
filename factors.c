@@ -1,8 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <math.h>
 
+long long int prime(long long int x, long long int num)
+{
+	long long int i;
 
+	for ( i = 2; i * i <= (x); i++)
+	{
+		if (x = num)
+			return (0);
+		if (x % i == 0)
+		{
+			x++;
+			i = 2;
+			continue;
+		}
+		else
+		continue;
+	}
+	return (x);
+}
 void factorize(char *line)
 {
 	long long int num, y;
@@ -14,7 +33,7 @@ void factorize(char *line)
 		if (num % x == 0)
 			break;
 		else
-			x++;
+			x = prime(x + 1, num);
 	}
 	y = num / x;
 	printf("%llu=%llu*%d\n", num, y, x);
